@@ -26,13 +26,16 @@ function Land() {
 
   const imgList = [
     { 
-      img: myImage1
+      img: myImage1, 
+      name : "one"
     }, 
     {
-      img: myImage2
+      img: myImage2, 
+      name : "two"
     }, 
     {
-      img: myImage3
+      img: myImage3, 
+      name : "three"
     }
   ]
 
@@ -98,7 +101,7 @@ function Land() {
     }, 
   ]
 
-  const imgList1 = imgList.map((img, i) => (<div key={i}><Img h1={img.h1} img={img.img}/></div>))
+  const imgList1 = imgList.map((img, i) => (<div key={i}><Img name={img.name} img={img.img}/></div>))
   const cartList1 = cartList.map((items, i) => (<div key = {i}><Cart img={items.img} h2={items.h2} price={items.price}/></div>))
 
   return (
@@ -107,8 +110,8 @@ function Land() {
     <section className='h-screen'>
         <div className='background h-full gap-[1em] flex-col w-full flex items-center justify-center'>
             <div className='text-center w-[80%] gap-[1em] flex flex-col items-center'>
-              <h1 className='text-[2.5rem] text-white capitalize lora font-extrabold'>Handcrafted Jewelry that tells your unique story</h1>
-              <p className='text-center roboto text-white w-[70%]'>Explore our exclusive collection of artisanal jewelry, meticulously crafted to add a touch of sophistication to every moment. From elegant necklaces to stunning custom pieces, find the perfect adornment to celebrate your individuality.</p>
+              <h1 className='sm:text-[2.5rem] text-[1.5rem] text-white capitalize lora font-extrabold'>Handcrafted Jewelry that tells your unique story</h1>
+              <p className='text-center roboto text-white sm:w-[70%]'>Explore our exclusive collection of artisanal jewelry, meticulously crafted to add a touch of sophistication to every moment. From elegant necklaces to stunning custom pieces, find the perfect adornment to celebrate your individuality.</p>
             </div>
             <Link className='px-[2em] py-[1em] rounded-[5px] bg-[--accent] text-white roboto active:bg-[--hov] hover:bg-[--hov] hover:scale-110 duration-[0.5s] font-bold'>
               Shop Now
@@ -121,7 +124,7 @@ function Land() {
       </div>
     </section>
     <section className='h-auto py-[4em] bg-[#f5f5f5]'>
-      <div className='w-full h-full grid min-[768px]:grid-cols-3 min-[768px]:grid-row-4 min-[1024px]:grid-rows-3 min-[1024px]:grid-cols-4 grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
+      <div className='w-full  h-full hidden sm:grid min-[768px]:grid-cols-3 min-[768px]:grid-row-4 min-[1024px]:grid-rows-3 min-[1024px]:grid-cols-4 grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
         {cartList1}
       </div>
       {/*  */}
