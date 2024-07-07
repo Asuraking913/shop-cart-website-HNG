@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: white;
+    --text: black;
+    --accent: #c51b28;
+    --padx: 4em;
+    --padx1: 1em;
+    --accentH: #c51b29d8;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("../src/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("../src//font/Poppins-Regular.ttf");
+}
+
+.line {
+    line-height: 1em;
+}
+
+.roboto {
+    font-family: roboto;
+}
+
+.poppins {
+    font-family: poppins;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.bg1 {
+    background-image: url("../src/assets/img4.png");
+}
+
+.textSha {
+    text-shadow: 0px 0px 8px white;
+}
+
+.boxSha {
+    box-shadow: 0px 0px 10px black;
+}
+
+.class1 .swiper-button-next {
+    color: var(--accent);
+    padding-left: 2em;
+    display: none;
+}
+
+.class1 .swiper-button-prev {
+    color: var(--accent);
+    margin-right: 4em;
+    display: none;
+}
+
+.class1 .swiper-pagination-bullet {
+    background-color: var(--accent);
+}
+
+.class1 .swiper-pagination {
+    padding-top: 4em;
+}
+
+body {
+    transition: 2s;
+    transition-timing-function: ease-in;
+}
