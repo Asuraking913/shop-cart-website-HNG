@@ -7,7 +7,7 @@ import cart from "../assets/bas.png"
 
 function Nav({}) {
   return (
-    <div className='bg-white lora font-senibold w-full text-3xl fixed top-0 flex px-[--padx] py-[--pady] justify-between items-center'>
+    <div className='bg-white z-50 lora font-senibold w-full text-3xl fixed top-0 flex px-[--padx] py-[--pady] justify-between items-center'>
         <Link className='text-[--accent] lora italic font-bold'>
             <p className='t'>Belle</p>
         </Link>

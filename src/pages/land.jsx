@@ -18,7 +18,7 @@ import cartImg11 from "../assets/cart11.png"
 import cartImg12 from "../assets/cart12.png"
 import Img from '../component/img'
 import Cart from '../component/cart'
-import person1 from "../assets/person.png"
+import person1 from "../assets/person1.png"
 import quotes from "../assets/quotes.png"
 
 function Land() {
@@ -119,17 +119,22 @@ function Land() {
           {imgList1}
       </div>
     </section>
-    <section className='h-auto'>
+    <section className='h-auto py-[4em]'>
       <div className='w-full h-full grid grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
         {cartList1}
       </div>
-      <div className='flex items-center gap-[2em] px-[6em]'>
-        <img src={person1} className='w-[300px]] h-[300px]' alt="" />
-        <div className='w-[50%] text-center flex flex-col gap-[1.2em] items-center text-xl h-full p-[1em] lora'>
-          <img src={quotes} className='w-[100px] h-[100px]' alt="" />
-          <p>Beauty is the best at what she does. Quality delivery? Check! Exceeding expectation? Check!! Timely delivery? Check!!!</p>
-          <p>Janet Owo</p>
-          <p>Rivers.NG</p>
+      {/*  */}
+      <div className='flex items-center justify-center w-full bg-red-100'>
+        <div className='w-full flex px-[8em] justify-center'>
+          <img src={person1} className='w-[300px] h-[300px] object-cover' alt="" />
+          <div className='flex items-center gap-[1em] flex-col justify-center'>
+            <img src={quotes} className='w-[100px] object-cover h-[80px]' alt="" />
+            <div className='w-[60%] text-center flex flex-col gap-[.5em]'>
+              <p className='text-xl lora'>Beauty is the best at what she does. Quality delivery? Check! Exceeding expectation? Check!! Timely delivery? Check!!!</p>
+              <p className='text-[1.1rem] lora font-semibold text-[--accent]'>Janet Owo</p>
+              <p  className='text-[--accent] lora'>Rivers, NG</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

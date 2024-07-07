@@ -13,7 +13,7 @@ function Cart({img, h2, price}) {
         <img src={dis} className='absolute top-[0.7em] left-[0.7em] w-[60px]' alt="" />
         <h2 className='lora text-[--accent] font-bold'>{h2}</h2>
         <p className='flex items-center gap-[.2em]'><FontAwesomeIcon icon={faNairaSign} />{price}</p>
-        <Link className = "px-[1em] py-[0.5em] rounded-[10px] hover:scale-110 duration-[0.5s] border-[#e4b363] border-2">
+        <Link className = "px-[1em] py-[0.5em] rounded-[10px] hover:scale-110 duration-[0.5s] border-[#e4b363] border-[1.5px] ">
           Add to cart
         </Link>
     </div>
