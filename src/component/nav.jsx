@@ -13,7 +13,7 @@ function Nav({}) {
         </Link>
 
         <ul className='flex gap-[2em] text-3xl text-[--accent]'>
-            <Link>
+            <Link className='hover:scale-110 hover:animate-pulse duration-[0.5s]'>
                 <img src={cart} className='h-[40px] w-[40px]' alt="" />
             </Link>
         </ul>

@@ -9,6 +9,10 @@
     --hov: #6d1e6dce;
     --bg: #f5f5f5;
 }
+/* 
+body {
+    overflow: hidden;
+} */
 
 
 @font-face {

@@ -20,6 +20,7 @@ import Img from '../component/img'
 import Cart from '../component/cart'
 import person1 from "../assets/person1.png"
 import quotes from "../assets/quotes.png"
+import Foot from '../component/footer'
 
 function Land() {
 
@@ -103,7 +104,7 @@ function Land() {
   return (
     <>
     <Nav />
-    <section className='h-screen '>
+    <section className='h-screen'>
         <div className='background h-full gap-[1em] flex-col w-full flex items-center justify-center'>
             <div className='text-center w-[80%] gap-[1em] flex flex-col items-center'>
               <h1 className='text-[2.5rem] text-white capitalize lora font-extrabold'>Handcrafted Jewelry that tells your unique story</h1>
@@ -120,17 +121,17 @@ function Land() {
       </div>
     </section>
     <section className='h-auto py-[4em] bg-[#f5f5f5]'>
-      <div className='w-full h-full grid grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
+      <div className='w-full h-full grid min-[768px]:grid-cols-3 min-[768px]:grid-row-4 min-[1024px]:grid-rows-3 min-[1024px]:grid-cols-4 grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
         {cartList1}
       </div>
       {/*  */}
       <div className='flex items-center bg-white  justify-center w-full'>
-        <div className='w-full flex px-[8em] justify-center'>
+        <div className='w-full flex sm:px-[8em] min-[1024px]:bg-black justify-center'>
           <img src={person1} className='w-[300px] h-[300px] object-cover' alt="" />
           <div className='flex items-center gap-[1em] flex-col justify-center'>
             <img src={quotes} className='w-[100px] object-cover h-[80px]' alt="" />
-            <div className='w-[60%] text-center flex flex-col gap-[.5em]'>
-              <p className='text-xl lora'>Beauty is the best at what she does. Quality delivery? Check! Exceeding expectation? Check!! Timely delivery? Check!!!</p>
+            <div className='lg:w-[60%] min-[768px]:w-[100%] text-center flex flex-col gap-[.5em]'>
+              <p className='sm:text-xl text-[1.1rem] lora'>Beauty is the best at what she does. Quality delivery? Check! Exceeding expectation? Check!! Timely delivery? Check!!!</p>
               <p className='text-[1.1rem] lora font-semibold text-[--accent]'>Janet Owo</p>
               <p  className='text-[--accent] lora'>Rivers, NG</p>
             </div>
@@ -139,33 +140,7 @@ function Land() {
       </div>
     </section>
     {/*  */}
-    <section className='h-auto bg-[--accent] grid gap-[2em] grid-row-1 grid-cols-5 py-[2em]  justify-items-center'>
-      <h2 className='text-2xl self-center lora font-semibold text-white'>Beauty Ireoluwa</h2>
-      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
-        <li className='text-[1.1rem] text-white lora font-bold'>Dealer on all kinds of jewelries</li>
-        <li>Phone: +234 9102469802</li>
-        <li>Email: belle’sglamour@gmail.com</li>
-        <li>Address: 123 Jewelry Lane, Lagos, Nigeria</li>
-      </ul>
-      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
-        <li className='text-[1.1rem] text-white lora font-bold'>Customer Service</li>
-        <li>Product Warranty</li>
-        <li>Reviews</li>
-        <li>Contact Support</li>
-      </ul>
-      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
-        <li className='text-[1.1rem] text-white lora font-bold'>Terms of Service</li>
-        <li>Privacy Policy</li>
-        <li>Return Policy</li>
-        <li>Shipping and Delivery</li>
-      </ul>
-      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
-        <li className='text-[1.1rem] text-white lora font-bold'>About Us</li>
-        <li>Blog</li>
-        <li>Our Story</li>
-        <li>Careers</li>
-      </ul>
-    </section>
+    <Foot />
     </>
   )
 }

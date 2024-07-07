@@ -11,7 +11,7 @@ function Cart({img, h2, price}) {
   const disList = [1, 2, 3]
 
   return (
-    <div className='text-center flex flex-col gap-[1em] relative items-center shadow-lg shadow-gray-100 pb-[1em] h-[350px] w-[250px] object-cover bg-white rounded-[1em]'>
+    <div className='text-center min-[768px]:w-[200px] flex flex-col gap-[1em] relative items-center shadow-lg shadow-gray-100 pb-[1em] h-[350px] min-[1200px]:w-[250px] object-cover bg-white rounded-[1em]'>
         <img src={img} className='h-[60%] rounded-t-[1em] object-cover w-full' alt="" />
         <img src={heart} className='absolute text h-[30px] w-[30px] text-white text-[1.5rem] right-[0.5em] top-[0.5em]' alt="" />
         <img src={dis} className='absolute top-[0.7em] left-[0.7em] w-[60px]' alt="" />
