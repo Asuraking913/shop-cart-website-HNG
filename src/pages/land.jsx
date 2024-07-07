@@ -124,7 +124,7 @@ function Land() {
         {cartList1}
       </div>
       {/*  */}
-      <div className='flex items-center justify-center w-full bg-red-100'>
+      <div className='flex items-center justify-center w-full'>
         <div className='w-full flex px-[8em] justify-center'>
           <img src={person1} className='w-[300px] h-[300px] object-cover' alt="" />
           <div className='flex items-center gap-[1em] flex-col justify-center'>

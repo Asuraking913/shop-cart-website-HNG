@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import dis from "../assets/dis.png"
 import heart from "../assets/heart.png"
+import { useState } from 'react'
 
 function Cart({img, h2, price}) {
+
+  const disList = [1, 2, 3]
+
   return (
     <div className='text-center flex flex-col gap-[1em] relative items-center shadow-lg shadow-gray-100 pb-[1em] h-[350px] w-[250px] object-cover bg-white rounded-[1em]'>
         <img src={img} className='h-[60%] rounded-t-[1em] object-cover w-full' alt="" />
