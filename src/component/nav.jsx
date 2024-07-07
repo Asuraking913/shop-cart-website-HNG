@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import cart from "../assets/bas.png"
 
 function Nav({}) {
   return (
@@ -13,7 +14,7 @@ function Nav({}) {
 
         <ul className='flex gap-[2em] text-3xl text-[--accent]'>
             <Link>
-                <FontAwesomeIcon icon={faCartShopping} />
+                <img src={cart} className='h-[40px] w-[40px]' alt="" />
             </Link>
         </ul>
     </div>
