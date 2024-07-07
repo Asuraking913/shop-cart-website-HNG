@@ -119,12 +119,12 @@ function Land() {
           {imgList1}
       </div>
     </section>
-    <section className='h-auto py-[4em]'>
+    <section className='h-auto py-[4em] bg-[#f5f5f5]'>
       <div className='w-full h-full grid grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
         {cartList1}
       </div>
       {/*  */}
-      <div className='flex items-center justify-center w-full'>
+      <div className='flex items-center bg-white  justify-center w-full'>
         <div className='w-full flex px-[8em] justify-center'>
           <img src={person1} className='w-[300px] h-[300px] object-cover' alt="" />
           <div className='flex items-center gap-[1em] flex-col justify-center'>
@@ -137,6 +137,34 @@ function Land() {
           </div>
         </div>
       </div>
+    </section>
+    {/*  */}
+    <section className='h-auto bg-[--accent] grid gap-[2em] grid-row-1 grid-cols-5 py-[2em]  justify-items-center'>
+      <h2 className='text-2xl self-center lora font-semibold text-white'>Beauty Ireoluwa</h2>
+      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
+        <li className='text-[1.1rem] text-white lora font-bold'>Dealer on all kinds of jewelries</li>
+        <li>Phone: +234 9102469802</li>
+        <li>Email: belle’sglamour@gmail.com</li>
+        <li>Address: 123 Jewelry Lane, Lagos, Nigeria</li>
+      </ul>
+      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
+        <li className='text-[1.1rem] text-white lora font-bold'>Customer Service</li>
+        <li>Product Warranty</li>
+        <li>Reviews</li>
+        <li>Contact Support</li>
+      </ul>
+      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
+        <li className='text-[1.1rem] text-white lora font-bold'>Terms of Service</li>
+        <li>Privacy Policy</li>
+        <li>Return Policy</li>
+        <li>Shipping and Delivery</li>
+      </ul>
+      <ul className='flex flex-col gap-[0.2em] text-white roboto'>
+        <li className='text-[1.1rem] text-white lora font-bold'>About Us</li>
+        <li>Blog</li>
+        <li>Our Story</li>
+        <li>Careers</li>
+      </ul>
     </section>
     </>
   )
