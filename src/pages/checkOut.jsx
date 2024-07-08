@@ -19,7 +19,7 @@ function Check() {
         <Nav1 nav={true}/>
         <section className='minh-[100vh] h-auto py-[4em] flex flex-col items-center justify-center font-extrabold px-[2em]'>
             <h2 className='text-4xl lora text-center uppercase mt-[4em] mb-[.5em]'>Check Out</h2>
-            <p className='flex text-center mb-[2em] items-center'>Cart <img src={arrow} className='ml-[1em] mr-[.5em] h-[15px]' alt="" /> <span className='mr-[.5em] text-[#e4b363]'>CheckOut</span> <img src={arrow} className='mr-[.5em] h-[15px]' alt="" /> Confirmation</p>
+            <p className='flex text-center mb-[2em] items-center'><Link to={"/cart"}>Cart </Link><img src={arrow} className='ml-[1em] mr-[.5em] h-[15px]' alt="" /> <span className='mr-[.5em] text-[#e4b363]'>CheckOut</span> <img src={arrow} className='mr-[.5em] h-[15px]' alt="" /> Confirmation</p>
             <div className='flex lg:flex-row min-[768px]:flex-col-reverse flex-col-reverse  h-full w-full gap-[2em] px-[0em]'>
                 <div className='min-h-[800px] sm:mt-0 mt-[2em] lg:w-[50%] bg-white rounded-[1em] sm:p-[2em] px-0 uppercase'>
                     <div className='border-b-[1.5px] border-b-[--accent] pb-[1em] px-[2em]'>
@@ -113,13 +113,13 @@ function Check() {
                         <div className='flex flex-wrap items-center  justify-center gap-[2em] sm:gap-[4em] font-semibold py-[1em] border-b-[1.5px] border-[--accent]'>
                             <img src={cartImg1} className='sm:w-[150px] w-[100px]' alt="" />
                             <p>Rare Stud Earings</p>
-                            <p className='sm:flex-grow-0 flex-grow text-center ml-[2em] lg:m-0 mt-[-5.5em]'><FontAwesomeIcon icon={faNairaSign}/>3500</p>
+                            <p className='sm:flex-grow-0 flex-grow text-center sm:m-0 ml-[2em] lg:m-0 mt-[-5.5em]'><FontAwesomeIcon icon={faNairaSign}/>3500</p>
                         </div>
                         
-                        <div className='flex flex-wrap items-center px-[2em]  justify-center gap-[1em] sm:gap-[4em] font-semibold py-[1em] border-b-[1.5px] border-[--accent]'>
+                        <div className='flex flex-wrap items-center px-[2em]  justify-center gap-[.5em] sm:gap-[4em] font-semibold py-[1em] border-b-[1.5px] border-[--accent]'>
                         <img src={cartImg2} className='sm:w-[150px] w-[100px]' alt="" />
                             <p>Custom Gold Necklace</p>
-                            <p className='sm:flex-grow-0 lg:mt-0 flex-grow text-center ml-[-0.2em] mt-[-3em]'><FontAwesomeIcon icon={faNairaSign}/>3500</p>
+                            <p className='sm:flex-grow-0 lg:mt-0 flex-grow text-center sm:m-0 ml-[-0.2em] mt-[-3em]'><FontAwesomeIcon icon={faNairaSign}/>3500</p>
                         </div>
                         <div className='sm:text-xl text-[1.1rem] lora flex flex-col items-end py-[1em] px-[2em] gap-[.5em]'>
                             <p className='lora'>Subtotal: <FontAwesomeIcon icon={faNairaSign}/>7000</p>
