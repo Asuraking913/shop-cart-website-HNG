@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Item({img, h2, p}) {
     
   return (
-    <div className='flex items-center gap-[2em] px-[2em]'>
+    <div className='flex sm:flex-row flex-col items-center gap-[2em] px-[2em]'>
         <img src={img} className='lg:w-[500px] min-[768px]:w-[400px] min-[768px]:h-[300px] object-cover lg:h-[400px]' alt="" />
         <div className='flex flex-col gap-[1em]'>
             <h2 className='lg:text-3xl  text-2xl text-[--accent] lora'>{h2}</h2>
