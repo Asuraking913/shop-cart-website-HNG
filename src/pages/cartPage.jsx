@@ -85,7 +85,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
   return (
     <div className=''>
       <Nav1 cart={"Your Cart"} />
-      <section className='flex min-[768px]:flex-col lg:flex-row gap-[2em] justify-betweengrid-cols-2 grid-row-1 min-h-[100vh] m-[2em]'>
+      <section className='flex min-[768px]:flex-col lg:flex-row gap-[2em] justify-betweengrid-cols-2 grid-row-1 m-[2em]'>
         <div className='bg-white rounded-[2em] gap-[2em] py-[4em] flex items-center '>
             <div className='flex flex-col gap-[1.5em]'>
               {items}
