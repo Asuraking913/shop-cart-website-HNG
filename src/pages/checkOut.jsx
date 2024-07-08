@@ -6,15 +6,21 @@ import { faNairaSign } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import cartImg1 from "../assets/cart14.png"
 import cartImg2 from "../assets/cart13.png"
+import { useEffect } from 'react'                               
 
 function Check() {
+
+    useEffect(() => {
+        window.scrollTo({top : 0, behavior : 'instant'})
+      })
+
   return (
     <div>
         <Nav1 nav={true}/>
         <section className='minh-[100vh] h-auto py-[4em] flex flex-col items-center justify-center font-extrabold px-[2em]'>
             <h2 className='text-4xl lora text-center uppercase mt-[4em] mb-[.5em]'>Check Out</h2>
             <p className='flex text-center mb-[2em] items-center'>Cart <img src={arrow} className='ml-[1em] mr-[.5em] h-[15px]' alt="" /> <span className='mr-[.5em] text-[#e4b363]'>CheckOut</span> <img src={arrow} className='mr-[.5em] h-[15px]' alt="" /> Confirmation</p>
-            <div className='flex lg:flex-row min-[768px]:flex-col-reverse  h-full w-full gap-[2em] px-[0em]'>
+            <div className='flex lg:flex-row min-[768px]:flex-col-reverse flex-col-reverse  h-full w-full gap-[2em] px-[0em]'>
                 <div className='min-h-[800px] sm:mt-0 mt-[2em] lg:w-[50%] bg-white rounded-[1em] sm:p-[2em] px-0 uppercase'>
                     <div className='border-b-[1.5px] border-b-[--accent] pb-[1em] px-[2em]'>
                         <h2 className='text-3xl lora text-[--accent]'>Shipping Details</h2>
@@ -90,7 +96,7 @@ function Check() {
                                 </p>
 
                                 <p className='text-center mt-[1em]'>
-                                    <Link className='bg-[--accent] py-[1em] rounded-[10px] px-[1.5em] text-white font-semibold'>
+                                    <Link to={"/paid"} className='bg-[--accent] py-[1em] rounded-[10px] px-[1.5em] text-white font-semibold'>
                                         PAY <FontAwesomeIcon icon={faNairaSign}/> 12,500
                                     </Link>
                                 </p>
@@ -119,7 +125,9 @@ function Check() {
                             <p className='lora'>Subtotal: <FontAwesomeIcon icon={faNairaSign}/>7000</p>
                             <p className='lora'>Shipping: <FontAwesomeIcon icon={faNairaSign}/>3500</p>
                             <p className='lora'>Tax: <FontAwesomeIcon icon={faNairaSign}/>2000</p>
-                            <p className='lora'><span className='text-[--accent] lora'>Total:</span> <FontAwesomeIcon icon={faNairaSign}/>12,500</p>
+                            <Link to={""} className='lora'>
+                                <span className='text-[--accent] lora'>Total:</span> <FontAwesomeIcon icon={faNairaSign}/>12,500
+                            </Link>
               
                         </div>
 
@@ -128,7 +136,7 @@ function Check() {
             </div>
 
             <div className='flex justify-start w-full px-[2em] mt-[2em]'>
-                <Link to={"/"} className='hover:scale-125 duration-[0.5s]'>
+                <Link to={"/cart"} className='hover:scale-125 duration-[0.5s]'>
                     <p className='text-xl flex items-center' >
                         <img src={arrow} className='inline rotate-180 mr-[1em]' alt="" />
                     Back To Shop
