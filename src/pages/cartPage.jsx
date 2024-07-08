@@ -9,15 +9,13 @@ import cartImg5 from "../assets/cart9.png"
 import cartImg6 from "../assets/cart6.png"
 import cartImg7 from "../assets/cart7.png"
 import cartImg8 from "../assets/cart8.png"
+import cartImg9 from "../assets/cart9.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNairaSign } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 // swiper
 import {Swiper, SwiperSlide} from "swiper/react"
-import {Navigation, Pagination, Autoplay} from "swiper/modules"
 import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
 import Bough from '../component/bought'
 import Foot from '../component/footer'
 
@@ -38,12 +36,12 @@ function CartPage() {
 
 const slide1 = [
   {
-    img: cartImg1, 
+    img: cartImg7, 
     h2: "Silver Chain Necklace",
     price: "7,500"
   }, 
   {
-    img: cartImg2, 
+    img: cartImg9, 
     h2: "Rare Stud Earrings",
     price: "3,500"
   }, 
@@ -87,7 +85,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
   return (
     <div className=''>
       <Nav1 cart={"Your Cart"} />
-      <section className='flex gap-[2em] justify-betweengrid-cols-2 grid-row-1 min-h-[100vh] m-[2em]'>
+      <section className='flex min-[768px]:flex-col lg:flex-row gap-[2em] justify-betweengrid-cols-2 grid-row-1 min-h-[100vh] m-[2em]'>
         <div className='bg-white rounded-[2em] gap-[2em] py-[4em] flex items-center '>
             <div className='flex flex-col gap-[1.5em]'>
               {items}
@@ -108,30 +106,48 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
         </div>
       </section>
       <section className='py-[2em]'>
-        <h2 className='text-3xl text-center mb-[1em] lora'>Usually Bought Together</h2>
-        <Swiper
-                modules={[Pagination, Navigation, Autoplay]}
-                spaceBetween={20}
-                slidesPerView={4}
-                loop = {true}
-                navigation = {true}
-                autoplay = {{delay : 7000}}
-                pagination = {{clickable: true}}
-                className='w-[80%] h-[400px]'
-                >
-                          {slide1List}
-        </Swiper>
+        <div className='min-[768px]:hidden lg:block'>
+          <h2 className='text-3xl text-center mb-[1em] lora'>Usually Bought Together</h2>
+          <Swiper
+                  spaceBetween={20}
+                  slidesPerView={4}
+                  className='w-[80%]  h-[400px]'
+                  >
+                            {slide1List}
+          </Swiper>
+          
+        </div>
+        <div className='min-[768px]:block lg:hidden'>
+            <Swiper
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    className='w-[80%] h-[400px]'
+                    >
+                              {slide1List}
+            </Swiper>
+          </div>
       </section>
       <section>
+      <div className='min-[768px]:hidden lg:block'>
       <h2 className='text-3xl text-center mb-[1em] lora'>You May Also Like</h2>
-        <Swiper
-                modules={[]}
-                spaceBetween={20}
-                slidesPerView={4}
-                className='w-[80%] h-[400px]'
-                >
-                          {slide1List1}
-        </Swiper>
+          <Swiper
+                  spaceBetween={20}
+                  slidesPerView={4}
+                  className='w-[80%]  h-[400px]'
+                  >
+                            {slide1List1}
+          </Swiper>
+          
+        </div>
+        <div className='min-[768px]:block lg:hidden'>
+            <Swiper
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    className='w-[80%] h-[400px]'
+                    >
+                              {slide1List1}
+            </Swiper>
+          </div>
       </section>
       <Foot />
     </div>
