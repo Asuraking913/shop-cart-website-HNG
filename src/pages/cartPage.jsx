@@ -3,9 +3,23 @@ import Nav1 from '../component/nav1'
 import Item from '../component/item'
 import cartImg1 from "../assets/cart14.png"
 import cartImg2 from "../assets/cart13.png"
+import cartImg3 from "../assets/cart3.png"
+import cartImg4 from "../assets/cart4.png"
+import cartImg5 from "../assets/cart9.png"
+import cartImg6 from "../assets/cart6.png"
+import cartImg7 from "../assets/cart7.png"
+import cartImg8 from "../assets/cart8.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNairaSign } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+// swiper
+import {Swiper, SwiperSlide} from "swiper/react"
+import {Navigation, Pagination, Autoplay} from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import Bough from '../component/bought'
+import Foot from '../component/footer'
 
 function CartPage() {
 
@@ -22,6 +36,52 @@ function CartPage() {
     }
 ]
 
+const slide1 = [
+  {
+    img: cartImg1, 
+    h2: "Silver Chain Necklace",
+    price: "7,500"
+  }, 
+  {
+    img: cartImg2, 
+    h2: "Rare Stud Earrings",
+    price: "3,500"
+  }, 
+  {
+    img: cartImg3, 
+    h2: "Bangle Bracelet",
+    price: "8,500"
+  }, 
+  {
+    img: cartImg4, 
+    h2: "Pendant Necklace",
+    price: "20,500"
+  }]
+
+  const slide2 = [
+    {
+      img: cartImg4, 
+      h2: "Silver Chain Necklace",
+      price: "7,500"
+    }, 
+    {
+      img: cartImg5, 
+      h2: "Rare Stud Earrings",
+      price: "3,500"
+    }, 
+    {
+      img: cartImg6, 
+      h2: "Bangle Bracelet",
+      price: "8,500"
+    }, 
+    {
+      img: cartImg8, 
+      h2: "Pendant Necklace",
+      price: "20,500"
+    }]
+
+const slide1List = slide1.map((items, i) => (<SwiperSlide className='' key = {i}><Bough img={items.img} h2={items.h2} price={items.price}/></SwiperSlide>))
+const slide1List1 = slide2.map((items, i) => (<SwiperSlide className='' key = {i}><Bough img={items.img} h2={items.h2} price={items.price}/></SwiperSlide>))
 const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h2} p={item.price} />))
 
   return (
@@ -47,6 +107,33 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
             </Link>
         </div>
       </section>
+      <section className='py-[2em]'>
+        <h2 className='text-3xl text-center mb-[1em] lora'>Usually Bought Together</h2>
+        <Swiper
+                modules={[Pagination, Navigation, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={4}
+                loop = {true}
+                navigation = {true}
+                autoplay = {{delay : 7000}}
+                pagination = {{clickable: true}}
+                className='w-[80%] h-[400px]'
+                >
+                          {slide1List}
+        </Swiper>
+      </section>
+      <section>
+      <h2 className='text-3xl text-center mb-[1em] lora'>You May Also Like</h2>
+        <Swiper
+                modules={[]}
+                spaceBetween={20}
+                slidesPerView={4}
+                className='w-[80%] h-[400px]'
+                >
+                          {slide1List1}
+        </Swiper>
+      </section>
+      <Foot />
     </div>
   )
 }
