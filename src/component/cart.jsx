@@ -8,8 +8,6 @@ import { useState } from 'react'
 
 function Cart({img, h2, price}) {
 
-  const disList = [1, 2, 3]
-
   return (
     <div className='text-center min-[768px]:w-[200px] flex flex-col gap-[1em] relative items-center shadow-lg shadow-gray-100 pb-[1em] h-[350px] min-[1200px]:w-[250px] object-cover bg-white rounded-[1em]'>
         <img src={img} className='h-[60%] rounded-t-[1em] object-cover w-full' alt="" />

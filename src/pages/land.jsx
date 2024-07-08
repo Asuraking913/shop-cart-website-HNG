@@ -21,6 +21,12 @@ import Cart from '../component/cart'
 import person1 from "../assets/person1.png"
 import quotes from "../assets/quotes.png"
 import Foot from '../component/footer'
+// swiper
+import {Swiper, SwiperSlide} from "swiper/react"
+import {Navigation, Pagination, Autoplay} from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
 
 function Land() {
 
@@ -103,6 +109,7 @@ function Land() {
 
   const imgList1 = imgList.map((img, i) => (<div key={i}><Img name={img.name} img={img.img}/></div>))
   const cartList1 = cartList.map((items, i) => (<div key = {i}><Cart img={items.img} h2={items.h2} price={items.price}/></div>))
+  const cartList2 = cartList.map((items, i) => (<SwiperSlide className='' key = {i}><Cart img={items.img} h2={items.h2} price={items.price}/></SwiperSlide>))
 
   return (
     <>
@@ -127,16 +134,30 @@ function Land() {
       <div className='w-full  h-full hidden sm:grid min-[768px]:grid-cols-3 min-[768px]:grid-row-4 min-[1024px]:grid-rows-3 min-[1024px]:grid-cols-4 grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
         {cartList1}
       </div>
+      <div className='sm:hidden block py-[4em]'>
+        <Swiper
+                modules={[Pagination, Navigation, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                loop = {true}
+                navigation = {true}
+                autoplay = {{delay : 7000}}
+                pagination = {{clickable: true}}
+                className='w-[80%] h-[400px]'
+                >
+                          {cartList2}
+        </Swiper>
+      </div>
       {/*  */}
-      <div className='flex items-center bg-white  justify-center w-full'>
-        <div className='w-full flex sm:px-[8em] min-[1024px]:bg-black justify-center'>
-          <img src={person1} className='w-[300px] h-[300px] object-cover' alt="" />
-          <div className='flex items-center gap-[1em] flex-col justify-center'>
-            <img src={quotes} className='w-[100px] object-cover h-[80px]' alt="" />
-            <div className='lg:w-[60%] min-[768px]:w-[100%] text-center flex flex-col gap-[.5em]'>
-              <p className='sm:text-xl text-[1.1rem] lora'>Beauty is the best at what she does. Quality delivery? Check! Exceeding expectation? Check!! Timely delivery? Check!!!</p>
+      <div className='flex items-center bg-white  justify-center w-full px-[1em]'>
+        <div className='w-full flex sm:px-[8em] justify-center'>
+          <img src={person1} className='sm:w-[300px] w-[150px] h-[150px] sm:h-[300px] object-cover' alt="" />
+          <div className='flex items-center sm:gap-[1em] sm:p-[2em] flex-col justify-center'>
+            <img src={quotes} className='sm:w-[100px] w-[20px] h-[20px] sm:h-[80px]' alt="" />
+            <div className='lg:w-[60%] min-[768px]:w-[100%] text-center flex flex-col sm:gap-[.5em]'>
+              <p className='sm:text-xl text-center text-[0.8rem] lora'>Beauty is the best at what she does. Quality delivery? Check! Exceeding expectation? Check!! Timely delivery? Check!!!</p>
               <p className='text-[1.1rem] lora font-semibold text-[--accent]'>Janet Owo</p>
-              <p  className='text-[--accent] lora'>Rivers, NG</p>
+              <p  className='text-[--accent] text-[0.8rem] lora'>Rivers, NG</p>
             </div>
           </div>
         </div>

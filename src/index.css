@@ -9,10 +9,14 @@
     --hov: #6d1e6dce;
     --bg: #f5f5f5;
 }
-/* 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    overflow: hidden;
-} */
+    background-color: #f5f5f5;
+}
 
 
 @font-face {
@@ -43,4 +47,22 @@ body {
 
 .text {
     text-shadow: 0px 0px 2px black;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    display: none;
+} 
+
+.swiper-pagination-bullet {
+    background-color: var(--accent);
+    margin-top: 2em;
+}
+
+.swiper-pagination {
+    margin-top: 6em;
+}
+
+.bas1 {
+    background-image: url("./assets/bas1.png");
+    background-position: cover;
 }
