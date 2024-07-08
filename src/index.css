@@ -13,6 +13,7 @@
 html {
     scroll-behavior: smooth;
     transition-duration: 0.5s;
+    /* overflow: hidden; */
 }
 
 body {

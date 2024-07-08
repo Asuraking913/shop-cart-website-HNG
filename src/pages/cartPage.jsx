@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav1 from '../component/nav1'
 import Item from '../component/item'
 import cartImg1 from "../assets/cart14.png"
@@ -25,6 +25,10 @@ import Bough from '../component/bought'
 import Foot from '../component/footer'
 
 function CartPage() {
+
+  useEffect(() => {
+    window.scrollTo({top : 0, behavior : 'instant'})
+  })
 
   const itemList = [
     {

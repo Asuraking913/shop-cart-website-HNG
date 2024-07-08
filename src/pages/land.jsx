@@ -27,8 +27,14 @@ import {Navigation, Pagination, Autoplay} from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import { useEffect } from 'react'
 
 function Land() {
+
+  useEffect(() => {
+    window.scrollTo({top : 0, behavior : 'instant'})
+  })
+
 
   const imgList = [
     { 
@@ -110,6 +116,7 @@ function Land() {
   const imgList1 = imgList.map((img, i) => (<div key={i}><Img name={img.name} img={img.img}/></div>))
   const cartList1 = cartList.map((items, i) => (<div key = {i}><Cart img={items.img} h2={items.h2} price={items.price}/></div>))
   const cartList2 = cartList.map((items, i) => (<SwiperSlide className='' key = {i}><Cart img={items.img} h2={items.h2} price={items.price}/></SwiperSlide>))
+
 
   return (
     <>
