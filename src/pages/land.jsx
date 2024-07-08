@@ -115,12 +115,12 @@ function Land() {
     <>
     <Nav />
     <section className='h-screen'>
-        <div className='background h-full gap-[1em] flex-col w-full flex items-center justify-center'>
-            <div className='text-center w-[80%] gap-[1em] flex flex-col items-center'>
+        <div className='background h-full gap-[1.5em] flex-col w-full flex items-center justify-center'>
+            <div className='text-center w-[80%] gap-[2em] flex flex-col items-center'>
               <h1 className='sm:text-[2.5rem] text-[1.5rem] text-white capitalize lora font-extrabold'>Handcrafted Jewelry that tells your unique story</h1>
-              <p className='text-center roboto text-white sm:w-[70%]'>Explore our exclusive collection of artisanal jewelry, meticulously crafted to add a touch of sophistication to every moment. From elegant necklaces to stunning custom pieces, find the perfect adornment to celebrate your individuality.</p>
+              <p className='text-center sm:text-xl roboto text-white sm:w-[70%]'>Explore our exclusive collection of artisanal jewelry, meticulously crafted to add a touch of sophistication to every moment. From elegant necklaces to stunning custom pieces, find the perfect adornment to celebrate your individuality.</p>
             </div>
-            <Link className='px-[2em] py-[1em] rounded-[5px] bg-[--accent] text-white roboto active:bg-[--hov] hover:bg-[--hov] hover:scale-110 duration-[0.5s] font-bold'>
+            <Link onClick={() => (document.getElementById('shop').scrollIntoView({behavior : 'smooth'}))} className='px-[2em] py-[1em] rounded-[5px] bg-[--accent] text-white roboto active:bg-[--hov] hover:bg-[--hov] hover:scale-110 duration-[0.5s] font-bold'>
               Shop Now
             </Link>
         </div>
@@ -130,7 +130,7 @@ function Land() {
           {imgList1}
       </div>
     </section>
-    <section className='h-auto py-[4em] bg-[#f5f5f5]'>
+    <section className='h-auto py-[4em] bg-[#f5f5f5]' id='shop'>
       <div className='w-full  h-full hidden sm:grid min-[768px]:grid-cols-3 min-[768px]:grid-row-4 min-[1024px]:grid-rows-3 min-[1024px]:grid-cols-4 grid-cols-4 grid-rows-3 py-[4em] px-[4em] gap-[1.5em] justify-items-center bg-[#f5f5f5]'>
         {cartList1}
       </div>

@@ -8,7 +8,7 @@ import cart from "../assets/bas.png"
 function Nav({}) {
   return (
     <div className='bg-white z-50 lora font-semibold w-full text-3xl fixed top-0 flex sm:px-[--padx] px-[1.2em]  py-[0.5em] sm:py-[--pady] justify-between items-center'>
-        <Link className='text-[--accent] lora italic font-bold'>
+        <Link onClick={() => (window.scrollTo({top:0, behavior:"smooth"}))} className='text-[--accent] lora italic font-bold'>
             <p className='t'>Belle</p>
         </Link>
 

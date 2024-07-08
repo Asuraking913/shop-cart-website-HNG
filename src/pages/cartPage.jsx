@@ -91,7 +91,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
     <div className=''>
       <Nav1 cart={"Your Cart"} />
       <section className='flex flex-col min-[768px]:flex-col lg:flex-row gap-[2em] relative justify-betweengrid-cols-2 grid-row-1 sm:mt-[10em] m-[2em]'>
-      <p className='text-xl absolute sm:text-3xl left-[35%] sm:left-[42%] lora font-extrabold top-[-2em]'>Your Cart</p>
+      <h2 className='text-xl absolute sm:text-3xl left-[35%] sm:left-[42%] lora font-extrabold top-[-2em]'>Your Cart</h2>
 
         <div className='bg-white rounded-[2em] gap-[2em] py-[4em] flex items-center '>
 
@@ -108,7 +108,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
               <p className='roboto'><span className='text-[--accent] lora'>Total:</span> <FontAwesomeIcon icon={faNairaSign}/>12,500</p>
               
             </div>
-            <Link className='px-[1em] bg-[--accent] py-[0.5em] text-[1.1rem] sm:text-xl text-white roboto mx-[1em] mt-[1em] font-semibold rounded-[8px]'>
+            <Link to={"/check"} className='px-[1em] bg-[--accent] py-[0.5em] text-[1.1rem] sm:text-xl text-white roboto mx-[1em] mt-[1em] font-semibold rounded-[8px]'>
               Proceed To Check Out
             </Link>
         </div>
