@@ -69,7 +69,7 @@ function Check() {
                     </div>
                     <div>
                         <div className='border-b-[1.5px] border-b-[--accent] pb-[1em] px-[2em]'>
-                            <h2 className='sm:text-3xl text-2xl lora text-[--accent]'>Shipping Details</h2>
+                            <h2 className='sm:text-3xl text-2xl lora text-[--accent]'>Payment Details</h2>
                         </div>
                         <form action="#" className='px-[2em] py-[2em] flex flex-col gap-[1em]'>
                             <p className='w-[90%]'> 
