@@ -16,7 +16,7 @@ function Item({img, h2, p}) {
                 <p>Price: <FontAwesomeIcon icon={faNairaSign}/>3500</p>
                 <p>Subtotal: <FontAwesomeIcon icon={faNairaSign}/>3500</p>
             </div>
-            <Link className='px-[1.5em] roboto min-[768px]:text-[1.1rem] lg:text-xl font-semibold w-[80%] py-[0.5em] border-[1.5px] rounded-[10px] border-[#e4b363]'>
+            <Link className='px-[1.5em] roboto min-[768px]:text-[1.1rem] lg:text-xl font-semibold flex items-center justify-center w-[100%] py-[0.5em] border-[1.5px] rounded-[10px] border-[#e4b363]'>
                 Remove from cart 
             </Link>
         </div>
