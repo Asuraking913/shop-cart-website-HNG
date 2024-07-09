@@ -95,9 +95,9 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
     <div className=''>
       <Nav1 cart={"Your Cart"} />
       <section className='flex flex-col min-[768px]:flex-col lg:flex-row gap-[2em] relative justify-betweengrid-cols-2 grid-row-1 sm:mt-[10em] m-[2em]'>
-      <h2 className='text-xl absolute sm:text-3xl left-[35%] sm:left-[42%] lora font-extrabold top-[-2em]'>Your Cart</h2>
+      <h2 className='text-xl top-[1em] absolute sm:text-3xl left-[35%] sm:left-[42%] lora font-extrabold sm:top-[-2em]'>Your Cart</h2>
 
-        <div className='bg-white rounded-[2em] gap-[2em] py-[4em] flex items-center '>
+        <div className='bg-white rounded-[2em] sm:mt-0 mt-[6em] gap-[2em] py-[4em] flex items-center '>
 
             <div className='flex flex-col gap-[1.5em]'>
               {items}
@@ -181,7 +181,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
             </Swiper>
           </div>
           <div className='sm:hidden block'>
-          <h2 className='text-3xl text-center mb-[1em] lora'>You May Also Like</h2>
+          <h2 className='text-3xl text-center mb-[1em] lora'>Usually Bought Together</h2>
 
 
             <Swiper
@@ -194,7 +194,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
                     pagination = {{clickable: true}}
                     className='w-[80%] h-[400px]'
                     >
-                              {slide1List}
+                              {slide1List1}
             </Swiper>
           </div>
       </section>
