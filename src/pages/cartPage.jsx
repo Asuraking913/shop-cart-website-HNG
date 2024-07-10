@@ -112,7 +112,7 @@ const items = itemList.map((item, i) => (<Item key={i} img={item.img} h2={item.h
               <p className='roboto'><span className='text-[--accent] lora'>Total:</span> <FontAwesomeIcon icon={faNairaSign}/>12,500</p>
               
             </div>
-            <Link to={"/check"} className='sm:px-[1em] px-[0.5em] flex items-center justify-center bg-[--accent] py-[0.5em] text-[0.8rem] sm:text-xl text-white roboto mx-[1em] mt-[1em] font-semibold rounded-[8px]'>
+            <Link to={"/check"} className='sm:px-[1em] px-[0.5em] flex items-center justify-center bg-[--accent] py-[0.5em] text-[0.8rem] sm:text-[1.1rem] text-white roboto mx-[1em] mt-[1em] font-semibold rounded-[8px]'>
               Proceed To Check Out
             </Link>
         </div>
